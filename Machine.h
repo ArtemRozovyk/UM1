@@ -12,16 +12,16 @@
 
 
 
-
+struct table {
+    uint32_t * plates;
+    uint32_t size;
+};
 
 class Machine {
 
     int pc=0;
     uint32_t reg [8] = {};
-    std::unordered_map<uint32_t, uint32_t *> mem;
-    std::unordered_map<uint32_t, uint32_t> sizes;
-    std::unordered_map<uint32_t, uint32_t> opcount;
-
+    std::unordered_map<uint32_t, struct table *> mem;
     std::list<uint32_t> recylcedIds;
     uint32_t index=1;
     void doOperation(uint32_t curr);
