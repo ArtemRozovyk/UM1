@@ -24,6 +24,8 @@ uint32_t* charVectToInt(char * chrs,int len){
 int main() {
     uint32_t * plates=nullptr;
     int length=0;
+
+    //ifstream is ("../codex.umz", std::ifstream::binary);
     ifstream is ("../sandmark.umz", std::ifstream::binary);
     if (is) {
         // get length of file:
